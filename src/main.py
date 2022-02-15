@@ -1,4 +1,10 @@
-import rescources
+import resources
+from resources import Character, Goblin
 
 if __name__ == "__main__": 
-    pass
+    nemy = resources.Character("Nemy", 20, 5, 3)
+    goblin_one = resources.Goblin(10, 3, 1)
+
+    print(nemy)
+    print()
+    print(goblin_one)
