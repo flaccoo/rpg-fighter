@@ -1,6 +1,5 @@
-from operator import le
 import resources
-from resources import Character, Goblin
+from resources import Character, Goblin, save_character, load_characters
 from random import randint, shuffle, choice
 
 def fight(players : list, enemies : list ):
@@ -53,6 +52,11 @@ if __name__ == "__main__":
 
     if len(enemies) == 0:
         print("The Players won!")
+        print(" w   ould you like to save the remaining characters?")
+        save_progress = input("(y/n): ")
+        if save_progress == "y":
+            for player in players:
+                save_character(player)
     elif len(players) == 0:
         print("The Goblins won!")
     
